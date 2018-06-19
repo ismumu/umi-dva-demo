@@ -24,7 +24,12 @@ let routes = [
       {
         "path": "/about",
         "exact": true,
-        "component": require('../about.js').default
+        "component": require('../about/index.js').default
+      },
+      {
+        "path": "/about/model",
+        "exact": true,
+        "component": require('../about/model.js').default
       },
       {
         "path": "/",
@@ -37,7 +42,7 @@ let routes = [
         "component": require('../index/model.js').default
       },
       {
-        "component": () => React.createElement(require('/usr/local/lib/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', routes: '[{"path":"/","component":"./src/layouts/index.js","routes":[{"path":"/404","exact":true,"component":"./src/pages/404.js"},{"path":"/about","exact":true,"component":"./src/pages/about.js"},{"path":"/","exact":true,"component":"./src/pages/index/index.js"},{"path":"/index/model","exact":true,"component":"./src/pages/index/model.js"}]}]' })
+        "component": () => React.createElement(require('/usr/local/lib/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', routes: '[{"path":"/","component":"./src/layouts/index.js","routes":[{"path":"/404","exact":true,"component":"./src/pages/404.js"},{"path":"/about","exact":true,"component":"./src/pages/about/index.js"},{"path":"/about/model","exact":true,"component":"./src/pages/about/model.js"},{"path":"/","exact":true,"component":"./src/pages/index/index.js"},{"path":"/index/model","exact":true,"component":"./src/pages/index/model.js"}]}]' })
       }
     ]
   }

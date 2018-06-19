@@ -1,0 +1,91 @@
+// nprogress color setting
+@nprogressColor: #1890ff;
+
+
+.layout {
+	min-height: 100vh;
+}
+
+.logo {
+	height: 32px;
+	background: rgba(255,255,255,.2);
+	margin: 16px;
+	text-align: center;
+	line-height: 32px;
+	color: #FFF;
+	font-size: 16px;
+	overflow: hidden;
+	font-family: 'Verdana';
+	border-radius: 4px;
+	text-transform: capitalize;
+}
+
+.header {
+	background: #fff;
+	padding-left: 0;
+}
+.contentWrap {
+	margin: 16px;
+}
+.content {
+	padding: 24px;
+	background: #fff;
+	min-height: 360px;
+}
+
+.breadcrumb {
+	margin: 16px 0;
+}
+
+.footer {
+	text-align: center;
+}
+
+.trigger {
+	font-size: 18px;
+	line-height: 64px;
+	padding: 0 24px;
+	cursor: pointer;
+	transition: color .3s;
+}
+
+.trigger:hover {
+	color: #1890ff;
+}
+
+
+// top scroll progress-indicator
+.progressIndicator {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	height: 3px;
+	background: linear-gradient(to right, rgba(24,144,255,0), rgba(24,144,255,1));
+}
+
+
+:global {
+
+	#nprogress .bar {
+		background: @nprogressColor;
+	}
+	#nprogress .peg {
+		box-shadow: 0 0 10px @nprogressColor, 0 0 5px @nprogressColor;
+	}
+
+	#nprogress .spinner-icon {
+		border-top-color: @nprogressColor;
+		border-left-color: @nprogressColor;
+	}
+
+	hr {
+		margin: 40px 0;
+		border: 1px dashed #eee;
+	}
+
+	pre {
+		border-radius: 4px;
+	}
+
+}

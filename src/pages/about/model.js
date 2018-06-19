@@ -5,7 +5,7 @@ import { message} from 'antd';
 
 
 export default {
-    namespace: 'index',
+    namespace: 'about',
     state: {
         a: 1,
         b: 2,

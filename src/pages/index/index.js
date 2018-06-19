@@ -1,6 +1,8 @@
 
 export default () => {
 	return (
-		<div>index</div>
+		<div>
+            index
+        </div>
 	);
 };
