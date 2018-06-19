@@ -2,11 +2,13 @@
 import { Component } from 'react';
 import withRouter from 'umi/withRouter';
 import { connect } from 'dva';
-import { Link } from 'dva/router';
 
 // nprogress
 // import 'nprogress/nprogress.css'
 // import NProgress from 'nprogress';
+
+
+import Meuns from '../components/menu/index';
 
 
 import styles from './index.less';
@@ -16,13 +18,12 @@ import {
     Layout,
     Icon,
     BackTop,
-    Menu,
 } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
 
 
-@connect(({ umiDvaGlobal }) => ({ umiDvaGlobal }))
+@connect(({ umiDvaGlobal, loading }) => ({ umiDvaGlobal, loading }))
 
 class App extends Component {
 
@@ -47,8 +48,7 @@ class App extends Component {
 
     render() {
 
-        const { umiDvaGlobal, children } = this.props;
-
+        const { umiDvaGlobal, children, route } = this.props;
         return (
             <Layout className={styles.layout}>
                 <Sider
@@ -57,14 +57,7 @@ class App extends Component {
                     onCollapse={this.onCollapse}
                 >
                     <div className={styles.logo}>umi dva demo</div>
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                        <Menu.Item key="index">
-                            <Link to="/">Index</Link>
-                        </Menu.Item>
-                        <Menu.Item key="about">
-                            <Link to="/about">About</Link>
-                        </Menu.Item>
-                    </Menu>
+                    <Meuns routes={route.routes} />
                 </Sider>
 
                 <Layout>

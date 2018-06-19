@@ -13,7 +13,9 @@
         "react-dom": "^16.4.1",
         "umi-plugin-dva": "^0.9.0"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "umi-plugin-routes": "^0.1.5"
+    },
     "author": "ismumu",
     "license": "ISC"
 }
